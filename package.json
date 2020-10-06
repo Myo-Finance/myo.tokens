@@ -34,11 +34,15 @@
     "@eth-optimism/solc": "0.5.16-alpha.0",
     "@openzeppelin/contracts": "2.5.0",
     "ethereum-waffle": "2.5.0",
+    "ethers": "^5.0.15",
     "mocha": "^7.0.1",
     "rimraf": "^2.6.3",
     "solc": "0.5.16"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "prettier-plugin-solidity": "^1.0.0-alpha.58"
   }
 }
