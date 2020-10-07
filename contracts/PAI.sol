@@ -34,7 +34,7 @@ contract PAI is ERC20, ERC20Detailed, Ownable {
         ERC20Detailed("Peso Argentino Intangible", "PAI", 18)
     {} // solhint-disable-line no-empty-blocks
 
-    function mint(address guy, uint256 amount) external {
+    function mint(address guy, uint256 amount) external onlyOwner {
         require(guy != address(0), "!zero_address");
         _mint(guy, amount);
     }

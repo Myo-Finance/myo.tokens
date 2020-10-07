@@ -36,7 +36,10 @@ contract MYO is ERC20, ERC20Detailed {
 
     // addresses and admins are expected to be in strictly increasing order
     // this is to prevent duplicate entries.
-    constructor() public ERC20Detailed("MYO Governance Token", "MYO", 18) {
+    constructor()
+        public
+        ERC20Detailed("MYO.Finance Governance Token", "MYO", 18)
+    {
         _minters.add(msg.sender);
         _gov.add(msg.sender);
     }
@@ -58,8 +61,8 @@ contract MYO is ERC20, ERC20Detailed {
     // Not Sure if this should be restricted to minters;
     // burn is called on the msg.sender's holdings.
     // it might be useful to prevent accidents.
-    function burn(uint256 amount) external onlyMinter {
-        _burn(msg.sender, amount);
+    function burn(address guy, uint256 amount) external onlyMinter {
+        _burn(guy, amount);
     }
 
     function addGovernor(address guy) external onlyGovernance {
