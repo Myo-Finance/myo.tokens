@@ -1,4 +1,4 @@
-# PAI and MYO Tokens suitable for Optimistic Rollup 
+# PAI and MYO Tokens Suitable for Optimistic Rollup 
 
 These are L2-compatible smart contracts for Myo.Finance ERC20 tokens (PAI: Peso Argentino Intangible), and MYO (governance and value extraction token). This repo is using Waffle framework for smart contract testing and will test the contracts in both EVM and OVM.
 
