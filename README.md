@@ -1,9 +1,6 @@
 # PAI and MYO Tokens suitable for Optimistic Rollup 
-###(taken from: Getting Started with the OVM: Simple ERC20 Token Waffle Tutorial)
 
-Hi there! Welcome to our OVM ERC20 Waffle tutorial.
-
-If your preferred smart contract testing framework is Truffle, see our OVM ERC20 Truffle tutorial here (todo). If you're interested in writing your first L2-compatible smart contract using Waffle as your smart contract testing framework, then you've come to the right place!  This repo serves as an example for how to test running your contracts in the EVM and OVM and how to uncover OVM bugs for the Optimism team to fix.
+These are L2-compatible smart contracts for Myo.Finance ERC20 tokens (PAI: Peso Argentino Intangible), and MYO (governance and value extraction token). This repo is using Waffle framework for smart contract testing and will test the contracts in both EVM and OVM.
 
 ### Prerequisites
 ```
@@ -15,12 +12,12 @@ node v11.10.1
 To start out, clone this example repo
 
 ```bash
-git clone https://github.com/ethereum-optimism/ERC20-Example.git
+git clone https://github.com/myo.finance/myo.tokens.git
 ```
 Now, enter the repository
 
 ```bash
-cd ERC20-Example
+cd myo.tokens
 ```
 Install all dependencies
 
@@ -38,16 +35,10 @@ To build contracts and run tests in the OVM:
 yarn all:ovm
 ```
 
-
-## OVM vs. EVM Incompatibilities
-Our goal is to bring the OVM as close to 100% compatibility with all existing Ethereum projects, but our software is still in an early stage. [This document](https://hackmd.io/elr0znYORiOMSTtfPJVAaA) will maintain the most up to date list of known incompatibilities between the OVM and EVM, along with our plans to fix them. 
-
-## How to uncover OVM bugs
-Most likely, all of your tests will be passing in the EVM, but not all of your tests will be passing in the OVM. We recommend isolating issues by running the single failing tests and commenting out parts of contracts until you narrow down what line(s) of Solidity are causing the discrepancy between the EVM and OVM. Then, hop in our [Discord](https://discordapp.com/invite/jrnFEvq) and share the bug you've uncovered and we'll fix it as soon as possible.
-
-## Wasn't that easy?
-The OVM provides a fresh new take on layer 2 development: it's identical to layer 1 development.  No hoops, no tricks--the Ethereum you know and love, ready to scale up with L2.  For more info on our progress and what's going on behind the scenes, you can follow us on [Twitter](https://twitter.com/optimismPBC) and [check out our docs](https://docs.optimism.io)!
+## Optimism Rollup
+These contracts can be compiled to both L1 (EVM) or Optimism L2 (OVM). For More info on Optimism go to 
+[Twitter](https://twitter.com/optimismPBC) or [check the docs](https://docs.optimism.io)!
 
 ## Troubleshooting
 
-Example project not working? [Create a Github Issue](https://github.com/ethereum-optimism/ERC20-Example/issues), or hop in our [Discord](https://discordapp.com/invite/jrnFEvq) channel and ask away.
+Something not working? Create a Github Issue](https://github.com/myo.finance/myo.tokens/issues).
