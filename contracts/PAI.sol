@@ -25,14 +25,12 @@ SOFTWARE.
 pragma solidity ^0.5.16;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
 import "@openzeppelin/contracts/ownership/Ownable.sol";
 
-contract PAI is ERC20, ERC20Detailed, Ownable {
-    constructor()
-        public
-        ERC20Detailed("Peso Argentino Intangible", "PAI", 18)
-    {} // solhint-disable-line no-empty-blocks
+contract PAI is ERC20, Ownable {
+    string public name = "Peso Argentino Intangible";
+    string public symbol = "PAI";
+    uint8 public decimals = 18;
 
     function mint(address guy, uint256 amount) external onlyOwner {
         require(guy != address(0), "!zero_address");

@@ -25,21 +25,21 @@ SOFTWARE.
 pragma solidity ^0.5.16;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
 import "@openzeppelin/contracts/access/Roles.sol";
 
-contract MYO is ERC20, ERC20Detailed {
+contract MYO is ERC20 {
     using Roles for Roles.Role;
 
     Roles.Role private _minters;
     Roles.Role private _gov;
 
+    string public name = "MYO.Finance Governance Token";
+    string public symbol = "MYO";
+    uint8 public decimals = 18;
+
     // addresses and admins are expected to be in strictly increasing order
     // this is to prevent duplicate entries.
-    constructor()
-        public
-        ERC20Detailed("MYO.Finance Governance Token", "MYO", 18)
-    {
+    constructor() public {
         _minters.add(msg.sender);
         _gov.add(msg.sender);
     }
