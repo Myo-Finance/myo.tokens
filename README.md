@@ -12,7 +12,7 @@ node v11.10.1
 To start out, clone this example repo
 
 ```bash
-git clone https://github.com/myo.finance/myo.tokens.git
+git clone https://github.com/Myo-Finance/myo.tokens.git
 ```
 Now, enter the repository
 
@@ -41,4 +41,4 @@ These contracts can be compiled to both L1 (EVM) or Optimism L2 (OVM). For More 
 
 ## Troubleshooting
 
-Something not working? Create a Github Issue](https://github.com/myo.finance/myo.tokens/issues).
+Something not working? Create a Github Issue](https://github.com/Myo-Finance/myo.tokens/issues).
